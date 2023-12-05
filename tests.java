@@ -69,7 +69,16 @@ public class tests
         clockTim1.setSecond(0);
         assertEquals("11:00:00", clockTim1.toString());
     }
+
+    @Test
+    public void addOneMinute()
+    {
+        clockTim1.advance(60);
+        clockTim2.setMinute(31);
+        assertEquals(true, clockTim1.equals(clockTim2));
+    }
 }
+
 
 
 
